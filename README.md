@@ -27,14 +27,18 @@ Technologies Used
 -HTTPX
 
 How It Works
+
 The health check service sends requests to the internal health endpoints of the monitored services.
+
 Each service reports:
   Service name
   Status
   HTTP status code
   Response details
   Error information when unavailable
+  
 The overall system is considered healthy only when all monitored services are operational.
+
 If one or more services are unavailable, the overall health status becomes unhealthy and the API returns HTTP 503.
 
 Health Endpoint
@@ -80,11 +84,13 @@ Example response:
 }
 ```
 Running the Project
+
 Create and activate a virtual environment:
-python -m venv .venv
-.venv\Scripts\activate
-Install the dependencies:
-pip install -r requirements.txt
+
+~python -m venv .venv
+~.venv\Scripts\activate
+~Install the dependencies:
+~pip install -r requirements.txt
 
 Start the healthcare services and health-check API using Uvicorn.
 The health endpoint can then be accessed at:

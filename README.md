@@ -10,7 +10,7 @@ The project monitors three backend services:
 
 The health check API exposes a `/health` endpoint that checks the monitored services and reports the health of the overall system.
 
-## Project Structure
+Project Structure
 
 ```text
 health_check_services/
@@ -27,14 +27,14 @@ requirements.txt
 README.md
 ```
 
-## Technologies Used
+Technologies Used
 
 - Python 3.11
 - FastAPI
 - Uvicorn
 - HTTPX
 
-## How It Works
+How It Works
 
 The health check service sends HTTP requests to the internal health endpoints of the monitored services.
 
@@ -99,7 +99,7 @@ Example Response
 
 In this example, the authentication and payment services are operational, while the notification service is unavailable. Therefore, the overall system is reported as `unhealthy`.
 
-## Running the Project
+Running the Project
 1. Clone the repository
 
 git clone https://github.com/elon-jude/Backend_healthcheckservice.git

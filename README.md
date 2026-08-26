@@ -12,7 +12,6 @@ It exposes a /health endpoint that reports the health status of each service and
 
 ## Project Structure
 
-text
 health_check_services/
     app.py
     health_checker.py
@@ -22,10 +21,10 @@ services/
     notification.py
     
 Technologies Used
-*Python
-*FastAPI
-*Uvicorn
-*HTTPX
+-Python
+-FastAPI
+-Uvicorn
+-HTTPX
 
 How It Works
 The health check service sends requests to the internal health endpoints of the monitored services.

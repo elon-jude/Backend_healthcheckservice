@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Healthcare Health Check Service
 
 A backend health monitoring service built with **Python** and **FastAPI** for monitoring the availability of healthcare application services.
@@ -209,3 +210,6 @@ The project uses a healthcare application scenario to demonstrate how backend se
 GitHub repository:
 
 https://github.com/elon-jude/Backend_healthcheckservice
+=======
+
+>>>>>>> be559b19dc7edbaa3543f306166b280ae95dce0e

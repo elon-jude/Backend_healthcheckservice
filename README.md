@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Healthcare Health Check Service
+Healthcare Health Check Service
 
 A backend health monitoring service built with **Python** and **FastAPI** for monitoring the availability of healthcare application services.
 
@@ -51,13 +50,13 @@ The overall system is considered **healthy** when all monitored services are ope
 
 If one or more services are unavailable, the overall status becomes **unhealthy** and the health-check API returns HTTP `503 Service Unavailable`.
 
-## Health Endpoint
+Health Endpoint
 
 ```http
 GET /health
 ```
 
-### Example Response
+Example Response
 
 ```json
 {
@@ -101,59 +100,37 @@ GET /health
 In this example, the authentication and payment services are operational, while the notification service is unavailable. Therefore, the overall system is reported as `unhealthy`.
 
 ## Running the Project
+1. Clone the repository
 
-### 1. Clone the repository
-
-```bash
 git clone https://github.com/elon-jude/Backend_healthcheckservice.git
 cd Backend_healthcheckservice
-```
 
-### 2. Create a virtual environment
+2. Create a virtual environment
 
-```bash
 python -m venv .venv
-```
 
-### 3. Activate the virtual environment
+3. Activate the virtual environment
 
-**Windows PowerShell:**
-
-```powershell
 .venv\Scripts\Activate.ps1
-```
 
-### 4. Install dependencies
+4. Install dependencies
 
-```bash
 pip install -r requirements.txt
-```
 
-### 5. Start the application
+5. Start the application
 
-```bash
 uvicorn health_check_services.app:app --reload --port 8000
-```
 
 The API will be available at:
-
-```text
 http://127.0.0.1:8000
-```
 
 The health endpoint is:
-
-```text
 http://127.0.0.1:8000/health
-```
 
 FastAPI documentation is available at:
-
-```text
 http://127.0.0.1:8000/docs
-```
 
-## Failure Detection
+Failure Detection
 
 If a monitored service stops responding or returns an unsuccessful response, the health checker records the service as `down`.
 
@@ -174,10 +151,7 @@ HTTP status    → 503
 
 This allows another monitoring system to detect that the healthcare application's backend is experiencing a service failure.
 
-## Production Monitoring
-
-In a production environment, the `/health` endpoint could be monitored using tools such as Prometheus, Grafana, or a cloud monitoring service.
-
+Production Monitoring
 Alerts could be configured to trigger after several consecutive failures rather than immediately after one failed request.
 
 Useful monitoring information includes:
@@ -188,13 +162,11 @@ Useful monitoring information includes:
 - Error messages
 - Failure counts
 - Application logs
-
 This information can help determine whether a problem is caused by a service outage, network issue, timeout, or temporary failure.
 
-## Project Purpose
+Project Purpose
 
 This project demonstrates:
-
 - Backend health checks
 - Microservice availability monitoring
 - HTTP communication between services
@@ -205,11 +177,5 @@ This project demonstrates:
 
 The project uses a healthcare application scenario to demonstrate how backend services can be monitored and how failures can be detected before they affect the wider system.
 
-## Repository
-
 GitHub repository:
-
 https://github.com/elon-jude/Backend_healthcheckservice
-=======
-
->>>>>>> be559b19dc7edbaa3543f306166b280ae95dce0e
